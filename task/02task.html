@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Validation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .datevalidation {
+            padding: 30px;
+            text-align: center;
+            /* background-color: #deb887; */
+            background-image: url(../../html/photos/foujan.webp);
+            height: 100%;
+            width: 100%;
+            color: aquamarine;
+            font-size: 175px;
+        }
+
+        .datevalidation button {
+            height: 50px;
+            width: 150px;
+            border-radius: 40px;
+        }
+
+        .datevalidation input {
+            height: 50px;
+            width: 250px;
+            border-radius: 10px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="datevalidation">
+        <input type="date" id="first">
+        <input type="date" id="second"> <br>
+        <button onclick="handlecheck()">Check</button>
+        <button onclick="handlecheckDate()">CheckDate</button>
+        <button onclick="handlecheckMonth()">CheckMonth</button>
+        <button onclick="handlecheckYear()">CheckYear</button>
+    </div>
+
+    <script>
+        let a = document.getElementById("first");
+        let b = document.getElementById("second");
+
+        function handlecheckDate() {
+            let c = new Date
+            c = a.value;
+            let d = c.getDate();
+
+            console.log(d);
+
+        }
+
+        function handlecheckMonth() {
+            let c = new Date(a.value);
+            let d = c.getMonth() + 1;
+
+            console.log(d);
+
+        }
+
+
+        function handlecheckYear() {
+            let c = new Date(a.value);
+            let d = c.getfullYear() + 1;
+
+            console.log(d);
+
+        }
+
+
+        function handlecheck() {
+            console.log(a);
+            console.log(a.value)
+            console.log(typeof a.value)
+            console.log(parseInt(a.value));
+            console.log(typeof parseInt(a.value));
+
+
+            let c = a.value.getDate()
+            console.log(c);
+
+
+            console.log(b);
+            console.log(typeof b.value);
+
+            console.log(parseInt(b.value) - parseInt(a.value))
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
